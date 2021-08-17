@@ -21,7 +21,7 @@
    
    //_________________________________Create db_____________________________________________________________________
    $creat_db="CREATE DATABASE ak_database";
-   
+   $db_connection= new mysqli($server_name, $user_name, $password, $db);
    if($db_connection->query($creat_db) || $db_connection->error=="Can't create database 'akdb_form'; database exists")//check the bd create
    {
        echo "<br>Database Created";
